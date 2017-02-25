@@ -1,0 +1,14 @@
+#N canvas 0 22 450 300 10;
+#X obj 68 74 map;
+#X obj 68 51 inlet;
+#X obj 108 51 inlet;
+#X obj 148 51 inlet;
+#X obj 188 51 inlet;
+#X obj 228 51 inlet;
+#X obj 68 97 outlet;
+#X connect 0 0 6 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 0 2;
+#X connect 4 0 0 3;
+#X connect 5 0 0 4;
