@@ -675,7 +675,7 @@
 #X connect 16 0 14 0;
 #X connect 17 0 7 0;
 #X restore 268 229 pd thetaNote;
-#N canvas 642 308 227 298 horseshoe 1;
+#N canvas 642 308 566 269 horseshoe 0;
 #X floatatom 27 71 5 0 0 0 - - -;
 #X floatatom 67 71 5 0 0 0 - - -;
 #X floatatom 107 71 5 0 0 0 - - -;
@@ -686,6 +686,8 @@
 #X obj 27 29 inlet;
 #X obj 27 133 expr if($f1 == 4 \, 1 \, 0);
 #X obj 27 153 s on;
+#X text 171 31 Calculates if each sensor is on with good conection
+and outputs a on/off value if all 4 are connected.;
 #X connect 0 0 5 0;
 #X connect 1 0 5 1;
 #X connect 2 0 5 2;
