@@ -1,6 +1,6 @@
 #N canvas 387 168 699 444 10;
 #X declare -lib mrpeach;
-#N canvas 67 149 358 320 alpha 0;
+#N canvas 67 149 358 320 alpha 1;
 #X obj 22 39 inlet;
 #X obj 22 91 unpack f f f f;
 #X msg 233 91 0;
@@ -188,7 +188,7 @@
 #X connect 34 0 32 0;
 #X connect 35 0 33 0;
 #X restore 88 159 pd beta;
-#N canvas 80 287 450 300 delta 0;
+#N canvas 80 287 450 300 delta 1;
 #X obj 23 22 inlet;
 #X obj 23 47 unpack f f f f;
 #X msg 234 47 0;
@@ -699,35 +699,35 @@
 #X connect 7 0 4 0;
 #X connect 8 0 9 0;
 #X restore 146 76 pd horseshoe;
-#X obj 430 48 vsl 15 64 0 0.39 0 0 alpha_1 empty alpha_1 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 430 48 vsl 15 64 0.3 0.39 0 0 alpha_1 empty alpha_1 0 -9 0 10
+-262144 -1 -1 2900 1;
 #X floatatom 430 125 5 0 0 0 - - -;
-#X obj 480 48 vsl 15 64 0 0.35 0 0 alpha_2 empty alpha_2 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 480 48 vsl 15 64 0.26 0.35 0 0 alpha_2 empty alpha_2 0 -9 0
+10 -262144 -1 -1 2400 1;
 #X floatatom 480 125 5 0 0 0 - - -;
-#X obj 530 48 vsl 15 64 0 0.36 0 0 beta_1 empty beta_1 0 -9 0 10 -262144
--1 -1 6300 1;
+#X obj 530 48 vsl 15 64 0.27 0.36 0 0 beta_1 empty beta_1 0 -9 0 10
+-262144 -1 -1 1800 1;
 #X floatatom 530 125 5 0 0 0 - - -;
-#X obj 580 48 vsl 15 64 0 0.45 0 0 beta_2 empty beta_2 0 -9 0 10 -262144
--1 -1 6300 1;
+#X obj 580 48 vsl 15 64 0.36 0.45 0 0 beta_2 empty beta_2 0 -9 0 10
+-262144 -1 -1 1800 1;
 #X floatatom 580 125 5 0 0 0 - - -;
-#X obj 430 168 vsl 15 64 0 0.74 0 0 delta_1 empty delta_1 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 430 168 vsl 15 64 0.4 0.74 0 0 delta_1 empty delta_1 0 -9 0
+10 -262144 -1 -1 3900 1;
 #X floatatom 430 245 5 0 0 0 - - -;
-#X obj 480 168 vsl 15 64 0 0.85 0 0 delta_2 empty delta_2 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 480 168 vsl 15 64 0.45 0.85 0 0 delta_2 empty delta_2 0 -9 0
+10 -262144 -1 -1 3900 1;
 #X floatatom 480 245 5 0 0 0 - - -;
-#X obj 530 168 vsl 15 64 0 0.3 0 0 gamma_1 empty gamma_1 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 530 168 vsl 15 64 0.21 0.3 0 0 gamma_1 empty gamma_1 0 -9 0
+10 -262144 -1 -1 3200 1;
 #X floatatom 530 245 5 0 0 0 - - -;
-#X obj 580 168 vsl 15 64 0 0.37 0 0 gamma_2 empty gamma_2 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 580 168 vsl 15 64 0.28 0.37 0 0 gamma_2 empty gamma_2 0 -9 0
+10 -262144 -1 -1 2300 1;
 #X floatatom 580 245 5 0 0 0 - - -;
-#X obj 430 288 vsl 15 64 0 0.35 0 0 theta_1 empty theta_1 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 430 288 vsl 15 64 0.26 0.35 0 0 theta_1 empty theta_1 0 -9 0
+10 -262144 -1 -1 2600 1;
 #X floatatom 430 365 5 0 0 0 - - -;
-#X obj 480 288 vsl 15 64 0 0.35 0 0 theta_2 empty theta_2 0 -9 0 10
--262144 -1 -1 6300 1;
+#X obj 480 288 vsl 15 64 0.26 0.35 0 0 theta_2 empty theta_2 0 -9 0
+10 -262144 -1 -1 2900 1;
 #X floatatom 480 365 5 0 0 0 - - -;
 #X msg 391 29 1;
 #X obj 391 7 loadbang;
