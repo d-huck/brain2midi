@@ -1,6 +1,6 @@
 #N canvas 387 168 699 444 10;
 #X declare -lib mrpeach;
-#N canvas 67 149 358 320 alpha 0;
+#N canvas 67 149 358 320 alpha 1;
 #X obj 22 39 inlet;
 #X obj 22 91 unpack f f f f;
 #X msg 233 91 0;
@@ -93,7 +93,7 @@
 #X connect 34 0 6 2;
 #X connect 34 0 7 2;
 #X connect 35 0 34 0;
-#X restore 28 159 pd alpha;
+#X restore 28 109 pd alpha;
 #N canvas 171 370 375 279 beta 0;
 #X obj 32 27 inlet;
 #X obj 32 47 unpack f f f f;
@@ -187,8 +187,8 @@
 #X connect 33 0 7 2;
 #X connect 34 0 32 0;
 #X connect 35 0 33 0;
-#X restore 88 159 pd beta;
-#N canvas 80 287 450 300 delta 1;
+#X restore 88 109 pd beta;
+#N canvas 41 465 450 300 delta 1;
 #X obj 23 22 inlet;
 #X obj 23 47 unpack f f f f;
 #X msg 234 47 0;
@@ -279,7 +279,7 @@
 #X connect 33 0 7 2;
 #X connect 34 0 32 0;
 #X connect 35 0 33 0;
-#X restore 148 159 pd delta;
+#X restore 148 109 pd delta;
 #N canvas 31 297 450 300 gamma 0;
 #X obj 30 22 inlet;
 #X obj 30 47 unpack f f f f;
@@ -371,7 +371,7 @@
 #X connect 33 0 7 2;
 #X connect 34 0 32 0;
 #X connect 35 0 33 0;
-#X restore 208 159 pd gamma;
+#X restore 208 109 pd gamma;
 #N canvas 367 468 450 300 theta 1;
 #X obj 37 34 inlet;
 #X obj 37 59 unpack f f f f;
@@ -463,20 +463,20 @@
 #X connect 33 0 7 2;
 #X connect 34 0 32 0;
 #X connect 35 0 33 0;
-#X restore 268 159 pd theta;
+#X restore 268 109 pd theta;
 #X msg 28 33 penis;
 #X obj 28 59 museLab_io;
-#X obj 28 183 counter;
-#X floatatom 28 207 5 0 0 0 - - -;
-#X obj 88 183 counter;
-#X floatatom 88 207 5 0 0 0 - - -;
-#X obj 148 183 counter;
-#X floatatom 148 207 5 0 0 0 - - -;
-#X obj 208 183 counter;
-#X floatatom 208 207 5 0 0 0 - - -;
-#X obj 268 183 counter;
-#X floatatom 268 207 5 0 0 0 - - -;
-#X msg 326 166 0;
+#X obj 28 133 counter;
+#X floatatom 28 157 5 0 0 0 - - -;
+#X obj 88 133 counter;
+#X floatatom 88 157 5 0 0 0 - - -;
+#X obj 148 133 counter;
+#X floatatom 148 157 5 0 0 0 - - -;
+#X obj 208 133 counter;
+#X floatatom 208 157 5 0 0 0 - - -;
+#X obj 268 133 counter;
+#X floatatom 268 157 5 0 0 0 - - -;
+#X msg 326 116 0;
 #N canvas 595 427 450 300 alphaNote 0;
 #X obj 29 126 noteout;
 #X obj 29 85 t b b b;
@@ -514,7 +514,7 @@
 #X connect 14 0 6 0;
 #X connect 15 0 6 1;
 #X connect 16 0 0 0;
-#X restore 28 319 pd alphaNote;
+#X restore 28 269 pd alphaNote;
 #N canvas 296 379 450 300 betaNote 0;
 #X obj 39 136 noteout;
 #X obj 39 95 t b b b;
@@ -554,7 +554,7 @@
 #X connect 15 0 5 1;
 #X connect 16 0 6 0;
 #X connect 17 0 0 0;
-#X restore 88 295 pd betaNote;
+#X restore 88 245 pd betaNote;
 #N canvas 582 335 450 300 deltaNote 0;
 #X obj 49 146 noteout;
 #X obj 49 105 t b b b;
@@ -594,7 +594,7 @@
 #X connect 15 0 6 1;
 #X connect 16 0 7 0;
 #X connect 17 0 0 0;
-#X restore 148 273 pd deltaNote;
+#X restore 148 223 pd deltaNote;
 #N canvas 645 346 450 300 gammaNote 0;
 #X obj 59 156 noteout;
 #X obj 59 115 t b b b;
@@ -634,7 +634,7 @@
 #X connect 15 0 14 1;
 #X connect 16 0 6 0;
 #X connect 17 0 0 0;
-#X restore 208 251 pd gammaNote;
+#X restore 208 201 pd gammaNote;
 #N canvas 597 248 450 300 thetaNote 0;
 #X obj 69 167 noteout;
 #X obj 69 126 t b b b;
@@ -674,8 +674,8 @@
 #X connect 15 0 14 1;
 #X connect 16 0 14 0;
 #X connect 17 0 7 0;
-#X restore 268 229 pd thetaNote;
-#N canvas 642 308 566 269 horseshoe 0;
+#X restore 268 179 pd thetaNote;
+#N canvas 642 308 227 298 horseshoe 1;
 #X floatatom 27 71 5 0 0 0 - - -;
 #X floatatom 67 71 5 0 0 0 - - -;
 #X floatatom 107 71 5 0 0 0 - - -;
@@ -686,8 +686,6 @@
 #X obj 27 29 inlet;
 #X obj 27 133 expr if($f1 == 4 \, 1 \, 0);
 #X obj 27 153 s on;
-#X text 171 31 Calculates if each sensor is on with good conection
-and outputs a on/off value if all 4 are connected.;
 #X connect 0 0 5 0;
 #X connect 1 0 5 1;
 #X connect 2 0 5 2;
@@ -701,35 +699,35 @@ and outputs a on/off value if all 4 are connected.;
 #X connect 7 0 4 0;
 #X connect 8 0 9 0;
 #X restore 146 76 pd horseshoe;
-#X obj 430 48 vsl 15 64 0.3 0.4 0 0 alpha_1 empty alpha_1 0 -9 0 10
--262144 -1 -1 4300 1;
+#X obj 430 48 vsl 15 64 0.3 0.45 0 0 alpha_1 empty alpha_1 0 -9 0 10
+-262144 -1 -1 6300 1;
 #X floatatom 430 125 5 0 0 0 - - -;
-#X obj 480 48 vsl 15 64 0.26 0.36 0 0 alpha_2 empty alpha_2 0 -9 0
-10 -262144 -1 -1 4200 1;
+#X obj 480 48 vsl 15 64 0.26 0.39 0 0 alpha_2 empty alpha_2 0 -9 0
+10 -262144 -1 -1 5900 1;
 #X floatatom 480 125 5 0 0 0 - - -;
-#X obj 530 48 vsl 15 64 0.27 0.37 0 0 beta_1 empty beta_1 0 -9 0 10
--262144 -1 -1 4600 1;
+#X obj 530 48 vsl 15 64 0.27 0.36 0 0 beta_1 empty beta_1 0 -9 0 10
+-262144 -1 -1 4900 1;
 #X floatatom 530 125 5 0 0 0 - - -;
-#X obj 580 48 vsl 15 64 0.36 0.46 0 0 beta_2 empty beta_2 0 -9 0 10
--262144 -1 -1 5000 1;
+#X obj 580 48 vsl 15 64 0.36 0.45 0 0 beta_2 empty beta_2 0 -9 0 10
+-262144 -1 -1 5100 1;
 #X floatatom 580 125 5 0 0 0 - - -;
-#X obj 430 168 vsl 15 64 0.4 0.75 0 0 delta_1 empty delta_1 0 -9 0
-10 -262144 -1 -1 4100 1;
+#X obj 430 168 vsl 15 64 0.4 0.74 0 0 delta_1 empty delta_1 0 -9 0
+10 -262144 -1 -1 3000 1;
 #X floatatom 430 245 5 0 0 0 - - -;
-#X obj 480 168 vsl 15 64 0.45 0.86 0 0 delta_2 empty delta_2 0 -9 0
-10 -262144 -1 -1 3900 1;
+#X obj 480 168 vsl 15 64 0.45 0.85 0 0 delta_2 empty delta_2 0 -9 0
+10 -262144 -1 -1 2700 1;
 #X floatatom 480 245 5 0 0 0 - - -;
-#X obj 530 168 vsl 15 64 0.21 0.31 0 0 gamma_1 empty gamma_1 0 -9 0
-10 -262144 -1 -1 3600 1;
+#X obj 530 168 vsl 15 64 0.21 0.3 0 0 gamma_1 empty gamma_1 0 -9 0
+10 -262144 -1 -1 3200 1;
 #X floatatom 530 245 5 0 0 0 - - -;
-#X obj 580 168 vsl 15 64 0.28 0.38 0 0 gamma_2 empty gamma_2 0 -9 0
-10 -262144 -1 -1 3700 1;
+#X obj 580 168 vsl 15 64 0.28 0.37 0 0 gamma_2 empty gamma_2 0 -9 0
+10 -262144 -1 -1 3300 1;
 #X floatatom 580 245 5 0 0 0 - - -;
-#X obj 430 288 vsl 15 64 0.26 0.36 0 0 theta_1 empty theta_1 0 -9 0
-10 -262144 -1 -1 4200 1;
+#X obj 430 288 vsl 15 64 0.21 0.35 0 0 theta_1 empty theta_1 0 -9 0
+10 -262144 -1 -1 1200 1;
 #X floatatom 430 365 5 0 0 0 - - -;
-#X obj 480 288 vsl 15 64 0.26 0.36 0 0 theta_2 empty theta_2 0 -9 0
-10 -262144 -1 -1 4000 1;
+#X obj 480 288 vsl 15 64 0.19 0.35 0 0 theta_2 empty theta_2 0 -9 0
+10 -262144 -1 -1 1400 1;
 #X floatatom 480 365 5 0 0 0 - - -;
 #X msg 391 29 1;
 #X obj 391 7 loadbang;
